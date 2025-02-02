@@ -1,5 +1,22 @@
 # paises
 
+@startuml
+entity Usuario {
+  +id_usuario: INT
+  --
+  nombre: VARCHAR
+  email: VARCHAR
+}
+entity Pedido {
+  +id_pedido: INT
+  --
+  fecha: DATE
+  total: DECIMAL
+}
+Usuario ||--o{ Pedido : realiza
+@enduml
+
+
 ## Project setup
 ```
 npm install
